@@ -1,15 +1,16 @@
 library(tidyverse)
 
-## Each CSV should contain only the following columns:
-## trn, doi, preprint_doi, search_date
+## Read in all CSVs from the data-raw/ folder
 trial_sets <- list.files("data-raw", "\\.csv$")
 
+## Combine all the CSVs into a single data frame
 trials <- tribble()
-
 for (trial_set in trial_sets) {
 
     trials_to_add <- read_csv(paste0("data-raw/", trial_set)) %>%
         select(trn, doi, preprint_doi, search_date)
+    ## Each CSV should contain only the following columns:
+    ## trn, doi, preprint_doi, search_date
     
     trials <- trials %>%
         bind_rows(
@@ -17,10 +18,16 @@ for (trial_set in trial_sets) {
         )
 }
 
+## Remove duplicate TRNs
 trials <- trials %>%
     group_by(trn) %>%
     arrange(search_date) %>%
     slice_tail() %>%
     ungroup()
 
+## Write data set to a CSV in the data/ folder
+trials %>%
+    write_csv("data/trials.csv")
+
+## Write data set to a .dba file in the data/ folder
 usethis::use_data(trials, overwrite = TRUE)
