@@ -8,8 +8,8 @@
 A tibble with 1 row and 4 variables:
 \describe{
 \item{trn}{chr Trial registry number}
-\item{doi}{chr DOI for the first publication of the results of the primary outcome of the trial, NA if none}
-\item{preprint_doi}{chr DOI for the preprint of the results of the primary outcome of the trial, NA if none}
+\item{doi}{chr DOI for the first publication of the results of the primary outcome of the trial, NA if none, unique}
+\item{preprint_doi}{chr DOI for the preprint of the results of the primary outcome of the trial, NA if none, non-unique due to possible multiple registration}
 \item{search_date}{date Date of publication search}
 }
 }
@@ -17,7 +17,7 @@ A tibble with 1 row and 4 variables:
 Some work
 }
 \usage{
-trials
+data(trials)
 }
 \description{
 This contains Trial Registration Numbers (TRNs) that have been
