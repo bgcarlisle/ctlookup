@@ -1,6 +1,21 @@
-#' Clinical trial registration numbers matched to digital object
-#' identifiers
+#' Trial Registration Numbers and their corresponding DOIs
 #'
-#' @docType data
+#' This contains Trial Registration Numbers (TRNs) that have been
+#' manually matched with the corresponding Digital Object Identifiers
+#' (DOIs) for publications of results for the primary outcome of the
+#' trial or its preprint. Protocols, systematic reviews, pooled
+#' analyses, subgroup analyses, or other secondary publications using
+#' data from the trial in question are not included. The search date
+#' field indicates when the search for the corresponding publication
+#' was completed.
+#' 
+#' @format A tibble with 1 row and 4 variables:
+#' \describe{
+#'   \item{trn}{chr Trial registry number}
+#'   \item{doi}{chr DOI for the first publication of the results of the primary outcome of the trial, NA if none}
+#'   \item{preprint_doi}{chr DOI for the preprint of the results of the primary outcome of the trial, NA if none}
+#'   \item{search_date}{date Date of publication search}
+#' }
 #'
-#' @usage data(trials)
+#' @source Some work
+"trials"
