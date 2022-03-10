@@ -1,13 +1,14 @@
 #' Trial Registration Numbers and their corresponding DOIs
 #'
 #' This contains Trial Registration Numbers (TRNs) that have been
-#' manually matched with the corresponding Digital Object Identifiers
-#' (DOIs) for publications of results for the primary outcome of the
-#' trial or its preprint. Protocols, systematic reviews, pooled
-#' analyses, subgroup analyses, or other secondary publications using
-#' data from the trial in question are not included. The search date
-#' field indicates when the search for the corresponding publication
-#' was completed.
+#' manually matched with the corresponding Digital Object Identifier
+#' (DOI) for the first full publication of the results for the primary
+#' outcome of the trial or its preprint. Abstract-only publications,
+#' protocols, systematic reviews, combined or pooled reports of
+#' multiple trials, subgroup analyses, or other secondary publications
+#' using data from the trial in question are not included. The search
+#' date field indicates when the most recent search for the
+#' corresponding publication was completed.
 #' 
 #' @format A tibble with 1 row and 4 variables:
 #' \describe{
