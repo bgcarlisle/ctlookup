@@ -26,7 +26,7 @@ lookup <- lookup %>%
     ungroup()
 
 ## Write data set to a CSV in the data/ folder
-ctlookup %>%
+lookup %>%
     write_csv("inst/extdata/lookup.csv")
 
 ## Write data set to a .dba file in the data/ folder
