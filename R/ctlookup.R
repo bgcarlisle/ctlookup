@@ -17,7 +17,8 @@
 #'   \item{search_date}{date Date of publication search}
 #' }
 #'
-#' @usage data(trials)
+#' @usage data(ctlookup)
 #'
-#' @source Some work
-"trials"
+#' @source Carlisle et al. Benefit, Risk, and Outcomes in Drug Development: A Systematic Review of Sunitinib. J Natl Cancer Inst, 2016. doi: 10.1093/jnci/djv292
+#' @source Mattina et al. Inefficiencies and Patient Burdens in the Development of the Targeted Cancer Drug Sorafenib: A Systematic Review. PLOS Biology, 2017. doi: 10.1371/journal.pbio.2000487
+"ctlookup"

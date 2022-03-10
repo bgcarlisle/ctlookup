@@ -4,7 +4,7 @@ library(tidyverse)
 trial_sets <- list.files("data-raw", "\\.csv$")
 
 ## Combine all the CSVs into a single data frame
-trials <- tribble()
+ctlookup <- tribble()
 for (trial_set in trial_sets) {
 
     trials_to_add <- read_csv(paste0("data-raw/", trial_set)) %>%
@@ -12,22 +12,22 @@ for (trial_set in trial_sets) {
     ## Each CSV should contain only the following columns:
     ## trn, doi, preprint_doi, search_date
     
-    trials <- trials %>%
+    ctlookup <- ctlookup %>%
         bind_rows(
             trials_to_add
         )
 }
 
 ## Remove duplicate TRNs
-trials <- trials %>%
+ctlookup <- ctlookup %>%
     group_by(trn) %>%
     arrange(search_date) %>%
     slice_tail() %>%
     ungroup()
 
 ## Write data set to a CSV in the data/ folder
-trials %>%
-    write_csv("data/trials.csv")
+ctlookup %>%
+    write_csv("data/ctlookup.csv")
 
 ## Write data set to a .dba file in the data/ folder
-usethis::use_data(trials, overwrite = TRUE)
+usethis::use_data(ctlookup, overwrite = TRUE)
