@@ -1,5 +1,3 @@
-library(tidyverse)
-
 test_that("All TRN's are well-formed", {
 
     ## Define well-formed TRN's
@@ -17,7 +15,7 @@ test_that("All TRN's are well-formed", {
         sum(
             ! grepl(
                   combined_regexes,
-                  ctlookup$trn
+                  lookup$trn
               )
         ),
         0

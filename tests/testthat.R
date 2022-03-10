@@ -1,4 +1,4 @@
 library(testthat)
-library(trn2doi)
+library(ctlookup)
 
-test_check("trn2doi")
+test_check("ctlookup")

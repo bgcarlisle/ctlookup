@@ -3,7 +3,7 @@ test_that("All DOI's are well-formed", {
         sum(
             ! grepl(
                   "^10.\\d{4,9}/[-._;()/:A-Z0-9]+$",
-                  ctlookup$doi,
+                  lookup$doi,
                   ignore.case=TRUE
               )
         ),
