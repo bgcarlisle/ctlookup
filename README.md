@@ -20,6 +20,7 @@ provided as a CSV in this repository as `inst/extdata/lookup.csv`.
 `lookup` contains four columns:
 
 | `trn` | `doi` | `preprint_doi` | `search_date` |
+|-------|-------|----------------|---------------|
 
 Each row in this data frame contains a Trial Registration Number (TRN,
 the `trn` column) and a date on which the literature was searched
