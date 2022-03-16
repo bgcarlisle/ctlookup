@@ -1,14 +1,21 @@
 # ctlookup
 
-Matching Trial Registration Numbers (TRNs) to Digital Object
-Identifiers (DOIs)
+A data set of Trial Registration Numbers (TRNs) matched to Digital
+Object Identifiers (DOIs) for their primary results publications
 
 ## To install and use
+
+Install from Github:
 
 ```
 install.packages("devtools")
 library(devtools)
 install_github("bgcarlisle/ctlookup")
+```
+
+After installation:
+
+```
 library(ctlookup)
 data(lookup)
 ```

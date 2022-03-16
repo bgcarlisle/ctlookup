@@ -1,9 +1,12 @@
 Package: ctlookup
-Title: Matching Trial Registration Numbers (TRNs) to Digital Object Identifiers (DOIs)
+Title: A data set of Trial Registration Numbers (TRNs) matched to
+    Digital Object Identifiers (DOIs) for their primary results
+    publications
 Version: 0.0.0.9000
 Authors@R: 
-    person("Benjamin Gregory", "Carlisle", , "murph@bgcarlisle.com", role = c("aut", "cre"),
-           comment = c(ORCID = "0000-0001-8975-0649"))
+    person("Benjamin Gregory", "Carlisle", , "murph@bgcarlisle.com",
+    role = c("aut", "cre"),
+    comment = c(ORCID = "0000-0001-8975-0649"))
 Description: Provides a database of Trial Registration Numbers (TRNs)
     that have been manually matched with Digital Object Identifiers
     (DOIs).
