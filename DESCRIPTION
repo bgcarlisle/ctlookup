@@ -10,7 +10,7 @@ Authors@R:
 Description: Provides a database of Trial Registration Numbers (TRNs)
     that have been manually matched with Digital Object Identifiers
     (DOIs).
-License: AGPL (>=3)
+License: CC BY 4.0
 URL: https://github.com/bgcarlisle/ctlookup
 BugReports: https://github.com/bgcarlisle/ctlookup/issues
 Imports:
